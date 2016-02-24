@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 
+	CSS Document
+	for Optime Financial <optimefinancial.com.au>
+	by Aakash Bhatia
+	Email: akash.bhatia1184@gmail.com
+*/
+/* ------------------------------------------------- */
+/*  0. Global Styles
+/*	1. Home Page Styles
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/* 0. Global Styles Start
+/* ------------------------------------------------- */
+/* Resets */
+* {
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	text-decoration:none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+   display:block;
+}
+
+/* Elements */
+body {
+	font-family:'OpenSans', Arial, sans-serif;
+	font-size:14px;
+	line-height:1.5;
+}
+
+/* Header Styles */
+header {
+	background:rgba(255, 255, 255, 0.5);
+	position:fixed;
+	width:100%;
+	overflow:hidden;
+}
+nav {
+	float:right;
+	width:70%;
+}
+#main-menu {
+	list-style-type:none;
+	width:100%;
+	overflow:hidden;
+}
+	#main-menu li {
+		float:left;
+		width:16%;
+		padding-left:2%;
+		padding-right:2%;
+		line-height:50px;
+	}
+		#main-menu li a {
+			display:block;
+		}
+/* IDs */
+#logo {
+	background-image:url(../images/logo.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	width:50%;
+	display:block;
+	text-indent:-1000px;
+	overflow:hidden;
+	float:left;
+}
+/* Classes */
+.wrap {
+	width:1200px;
+	margin:0 auto;
+}
+/* ------------------------------------------------- */
+/* 1. Home Page Styles Start
+/* ------------------------------------------------- */
