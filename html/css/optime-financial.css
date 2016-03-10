@@ -55,8 +55,8 @@ header {
 	background:rgba(255, 255, 255, 0.5);
 	position:fixed;
 	width:100%;
-	overflow:hidden;
-	z-index:9999;
+	overflow:visible;
+	z-index:99;
 }
 nav {
 	float:right;
@@ -65,17 +65,18 @@ nav {
 #main-menu {
 	list-style-type:none;
 	width:100%;
-	overflow:hidden;
+	overflow:visible;
 }
 	#main-menu li {
 		float:left;
-		width:12%;
+		width:10%;
 		padding-left:2%;
 		padding-right:2%;
 		line-height:50px;
 		font-weight:bold;
 		font-family: 'Ubuntu', sans-serif;
 		text-align:center;
+		position:relative;
 	}
 		#main-menu li a {
 			display:block;
@@ -83,6 +84,36 @@ nav {
 			#main-menu li:hover a, #main-menu li.current-menu-item a {
 				color:#F00;
 			}
+		#main-menu li ul {
+			position:absolute;
+			width:250px;
+			z-index:999;
+			top:50px;
+			left:30px;
+			background-color:#fff;
+			visibility:hidden;
+		}
+			#main-menu li ul li {
+				float:none;
+				display:block;
+				width:92%;
+				text-align:left;
+				border-bottom:1px solid #000;
+				padding-left:4%;
+				padding-right:4%;
+			}
+				#main-menu li ul li:last-child {
+					border:none;
+				}
+					#main-menu li:hover ul li a {
+						color:#000;
+					}
+				#main-menu li ul li a {
+					display:block;
+				}
+					#main-menu li ul li a:hover {
+						color:#F00;
+					}
 /* Footer Styles */
 footer {
 	background-color:#1f232b;
@@ -116,6 +147,29 @@ footer {
 #made-left {
 	float:left;
 }
+
+#side-nav {
+	list-style-type:none;
+}
+	#side-nav li {
+		font-family:"Ubuntu",sans-serif;
+		font-weight:bold;
+		margin-bottom:10px;
+	}
+		#side-nav li a {
+			display:block;
+			height:30px;
+			line-height:30px;
+			border:1px solid #f00;
+			padding-left:20px;
+			color:#f00;
+			border-radius:3px;
+		}
+			#side-nav li a:hover, #side-nav li.active a {
+				background-color:#000;
+				color:#fff;
+				border-color:#000;
+			}
 /* Classes */
 .clear {
 	clear:both;
@@ -135,6 +189,17 @@ p.title {
 	width:1200px;
 	margin:0 auto;
 }
+.three-columns {
+	width:100%;
+	overflow:hidden;
+}
+	.three-columns .column {
+		width:30%;
+		padding-left:1.5%;
+		padding-right:1.5%;
+		float:left;
+		padding-bottom:20px;
+	}
 .four-columns {
 	width:100%;
 	overflow:hidden;
@@ -160,6 +225,7 @@ p.title {
 	border-radius:5px;
 	color:#fff;
 	cursor:pointer;
+	text-align:center;
 }
 	.link-style-1:hover {
 		background-color:#000;
@@ -183,10 +249,28 @@ p.title {
 	.link-style-2:before {
 		content:"\2713";
 		padding-right:10px;
+		padding-left:10px;
 		color:#0C0;
 	}
 	.link-style-2:hover {
 		background-color:#dd3333;
+	}
+.link-style-3 {
+	border:1px solid #1f232b;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	width:150px;
+	height:30px;
+	display:block;
+	line-height:30px;
+	text-transform:uppercase;
+	text-align:center;
+	font-weight:bold;
+}
+	.link-style-3:hover {
+		background-color:#1f232b;
+		color:#fff;
 	}
 .banner {
 	position:relative;
@@ -236,3 +320,31 @@ p.title {
 	overflow:hidden;
 	padding-bottom:20px;
 }
+
+/* ------------------------------------------------- */
+/* 1. Blog Listing Page Styles Start
+/* ------------------------------------------------- */
+.blogs h2 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size:24px;
+}
+
+/* ------------------------------------------------- */
+/* 2. Calculator Pages Styles Start
+/* ------------------------------------------------- */
+#two-column {
+	width:100%;
+	overflow:hidden;
+}
+	#two-column .left {
+		width:70%;
+		float:left;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+	#two-column .right {
+		width:30%;
+		float:left;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
